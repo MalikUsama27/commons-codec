@@ -106,7 +106,6 @@ public final class MurmurHash3 {
                     // fall through
                 case 1:
                     k1 ^= unprocessed[0];
-    
                     // mix functions
                     k1 *= C1_32;
                     k1 = Integer.rotateLeft(k1, R1_32);
@@ -116,7 +115,6 @@ public final class MurmurHash3 {
                 default:
                     break;
                 }
-
             // finalization
             result ^= totalLen;
             return fmix32(result);
