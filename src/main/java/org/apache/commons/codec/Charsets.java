@@ -19,48 +19,13 @@ package org.apache.commons.codec;
 import java.nio.charset.Charset;
 
 /**
- * Charsets required of every implementation of the Java platform.
- *
- * From the Java documentation <a href="https://docs.oracle.com/javase/6/docs/api/java/nio/charset/Charset.html">Standard
- * charsets</a>:
- * <p>
- * <cite>Every implementation of the Java platform is required to support the following character encodings. Consult the
- * release documentation for your implementation to see if any other encodings are supported. Consult the release
- * documentation for your implementation to see if any other encodings are supported. </cite>
- * </p>
- *
- * <ul>
- * <li>{@code US-ASCII}<p>
- * Seven-bit ASCII, a.k.a. ISO646-US, a.k.a. the Basic Latin block of the Unicode character set.</p></li>
- * <li>{@code ISO-8859-1}<p>
- * ISO Latin Alphabet No. 1, a.k.a. ISO-LATIN-1.</p></li>
- * <li>{@code UTF-8}<p>
- * Eight-bit Unicode Transformation Format.</p></li>
- * <li>{@code UTF-16BE}<p>
- * Sixteen-bit Unicode Transformation Format, big-endian byte order.</p></li>
- * <li>{@code UTF-16LE}<p>
- * Sixteen-bit Unicode Transformation Format, little-endian byte order.</p></li>
- * <li>{@code UTF-16}<p>
- * Sixteen-bit Unicode Transformation Format, byte order specified by a mandatory initial byte-order mark (either order
- * accepted on input, big-endian used on output.)</p></li>
- * </ul>
- *
- * This perhaps would best belong in the Commons Lang project. Even if a similar class is defined in Commons Lang, it is
- * not foreseen that Commons Codec would be made to depend on Commons Lang.
+ * Charsets utilities.
  *
  * <p>
  * This class is immutable and thread-safe.
  * </p>
- *
- * @see <a href="https://docs.oracle.com/javase/6/docs/api/java/nio/charset/Charset.html">Standard charsets</a>
- * @since 1.7
  */
-public class Charsets {
-
-    //
-    // This class should only contain Charset instances for required encodings. This guarantees that it will load
-    // correctly and without delay on all Java platforms.
-    //
+public final class Charsets {
 
     /**
      * Returns the given Charset or the default Charset if the given Charset is null.
@@ -90,6 +55,6 @@ public class Charsets {
      * Private constructor to prevent instantiation.
      */
     private Charsets() {
-        // Prevent instantiation of this class
+        // Hide utility class constructor
     }
 }
