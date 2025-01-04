@@ -159,13 +159,6 @@ public class Charsets {
     public static Charset toCharset(final String charset) {
         return charset == null ? Charset.defaultCharset() : Charset.forName(charset);
     }
-
-    /**
-     * TODO Make private in 2.0.
-     *
-     * @deprecated TODO Make private in 2.0.
-     */
-    
     public Charsets() {
         // empty
     }
