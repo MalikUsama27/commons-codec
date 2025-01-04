@@ -200,6 +200,7 @@ public class RefinedSoundex implements StringEncoder {
         sBuf.append(str.charAt(0));
 
         char last, current;
+        current = 0;
         last = '*';
 
         for (int i = 0; i < str.length(); i++) {
